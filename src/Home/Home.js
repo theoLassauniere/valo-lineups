@@ -1,14 +1,12 @@
-import './Home.css';
+import './Home.scss';
+import MapButton from "../MapButton/MapButton";
+import Titles from "./Titles/Titles";
 
 function Home() {
     return (
-        <div className="titles">
-            <h1>
-                Welcome To Valorant Lineups !
-            </h1>
-            <h2>
-                Select the map you want to practice :
-            </h2>
+        <div>
+            <Titles/>
+            <MapButton/>
         </div>
     )
 }
