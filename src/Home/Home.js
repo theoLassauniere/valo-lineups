@@ -4,9 +4,9 @@ import Titles from "./Titles/Titles";
 
 function Home() {
     return (
-        <div>
-            <Titles/>
-            <MapButton/>
+        <div className="Home">
+            <Titles className="Titles"/>
+            <MapButton className="MapButton"/>
         </div>
     )
 }

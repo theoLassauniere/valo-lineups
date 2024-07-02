@@ -5,7 +5,7 @@ import logo from '../assets/logo192.png';
 function MapButton() {
     return (
         <div>
-            <button className="MapButton">
+            <button className="mapButton">
                 <img src={logo} className='mapImage' alt='Map' />
                 Map Name
             </button>
