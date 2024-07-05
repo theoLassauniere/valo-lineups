@@ -1,13 +1,11 @@
 import './MapButton.scss';
 
-import logo from '../assets/logo192.png';
-
-function MapButton() {
+function MapButton({mapName, mapImage}) {
     return (
         <div>
             <button className="mapButton">
-                <img src={logo} className='mapImage' alt='Map' />
-                Map Name
+                <img src={mapImage} className='mapImage' alt='Map' />
+                <p className='mapName'>{mapName}</p>
             </button>
         </div>
 
