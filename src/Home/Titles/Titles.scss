@@ -1,15 +1,29 @@
 @import url('https://fonts.cdnfonts.com/css/valorant');
 
+@keyframes hideItem {
+  to {
+    width:0;
+    height:0;
+    overflow:hidden;
+  }
+}
+
 div {
   font-family: 'VALORANT', sans-serif;
 
-  h1 {
+  .welcome {
     text-align: center;
-    color: blue;
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    animation: hideItem 0s ease-in 5s forwards;
   }
 
-  h2 {
+  .selection {
     text-align: center;
-    color: blue;
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    animation: hideItem 0s ease-in 10s forwards;
   }
 }

@@ -1,11 +1,17 @@
 .Home {
-  margin-top: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  .Titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .Maps {
+    margin-top: 10vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

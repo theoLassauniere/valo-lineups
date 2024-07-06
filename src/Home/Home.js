@@ -12,23 +12,48 @@ import sunset from "../assets/map-images/sunset.jpg";
 import ascent from "../assets/map-images/ascent.jpg";
 import pearl from "../assets/map-images/pearl.jpg";
 import lotus from "../assets/map-images/lotus.jpg";
+import { useEffect, useState } from "react";
+
+
+
+const maps = [
+    { name: 'Abyss', image: abyss },
+    { name: 'Haven', image: haven },
+    { name: 'Bind', image: bind },
+    { name: 'Split', image: split },
+    { name: 'Fracture', image: fracture },
+    { name: 'Icebox', image: icebox },
+    { name: 'Breeze', image: breeze },
+    { name: 'Sunset', image: sunset },
+    { name: 'Ascent', image: ascent },
+    { name: 'Pearl', image: pearl },
+    { name: 'Lotus', image: lotus },
+];
 
 function Home() {
+
+    const [displayMaps, setDisplayMaps] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setDisplayMaps(true);
+        }, 10000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div className="Home">
             <Titles className="Titles"/>
             <div className="Maps">
-                <MapButton className="MapButton" mapName="Abyss" mapImage={abyss}/>
-                <MapButton className="MapButton" mapName="Haven" mapImage={haven}/>
-                <MapButton className="MapButton" mapName="Bind" mapImage={bind}/>
-                <MapButton className="MapButton" mapName="Split" mapImage={split}/>
-                <MapButton className="MapButton" mapName="Fracture" mapImage={fracture}/>
-                <MapButton className="MapButton" mapName="Icebox" mapImage={icebox}/>
-                <MapButton className="MapButton" mapName="Breeze" mapImage={breeze}/>
-                <MapButton className="MapButton" mapName="Sunset" mapImage={sunset}/>
-                <MapButton className="MapButton" mapName="Ascent" mapImage={ascent}/>
-                <MapButton className="MapButton" mapName="Pearl" mapImage={pearl}/>
-                <MapButton className="MapButton" mapName="Lotus" mapImage={lotus}/>
+                {displayMaps && maps.map((map, index) => (
+                    <MapButton
+                        key={index}
+                        className="MapButton"
+                        mapName={map.name}
+                        mapImage={map.image}
+                    />
+                ))}
             </div>
         </div>
     );
