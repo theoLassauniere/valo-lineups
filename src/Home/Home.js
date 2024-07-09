@@ -13,6 +13,7 @@ import ascent from "../assets/map-images/ascent.jpg";
 import pearl from "../assets/map-images/pearl.jpg";
 import lotus from "../assets/map-images/lotus.jpg";
 import { useEffect, useState } from "react";
+import ShowMapsButton from "./ShowMapsButton/ShowMapsButton";
 
 
 
@@ -35,16 +36,19 @@ function Home() {
     const [displayMaps, setDisplayMaps] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setDisplayMaps(true);
-        }, 10000);
+        console.log('displayMaps state:', displayMaps);
+    }, [displayMaps]);
 
-        return () => clearTimeout(timer);
-    }, []);
+    function showMaps() {
+        console.log('Show Maps Button Clicked');
+        setDisplayMaps(true);
+    }
+
 
     return (
         <div className="Home">
             <Titles className="Titles"/>
+            <ShowMapsButton className="ShowMapsButton" onClick={showMaps}/>
             <div className="Maps">
                 {displayMaps && maps.map((map, index) => (
                     <MapButton

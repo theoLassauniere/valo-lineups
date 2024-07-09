@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'dinnext';
+    src: url('../../assets/fonts/DINNextW1G-Regular/DINNextW1G-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.showMapsButton {
+    margin-top: 32px;
+    padding: 13px 34px;
+    background-color: #6eb2ad;
+    color: #d7e6e5;
+    outline: rgb(236, 232, 225) solid 1px;
+    outline-offset: 3px;
+    text-wrap: balance;
+    line-height: 26px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .text {
+        font-family: 'dinnext', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
