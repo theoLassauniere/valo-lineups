@@ -34,6 +34,7 @@ const maps = [
 function Home() {
 
     const [displayMaps, setDisplayMaps] = useState(false);
+    const [displayHomeElements, setDisplayHomeElements] = useState(true);
 
     useEffect(() => {
         console.log('displayMaps state:', displayMaps);
@@ -42,13 +43,18 @@ function Home() {
     function showMaps() {
         console.log('Show Maps Button Clicked');
         setDisplayMaps(true);
+        setDisplayHomeElements(false);
     }
 
 
     return (
         <div className="Home">
-            <Titles className="Titles"/>
-            <ShowMapsButton className="ShowMapsButton" onClick={showMaps}/>
+            {displayHomeElements &&
+                <div className="homeElements">
+                    <Titles className="Titles"/>
+                    <ShowMapsButton className="ShowMapsButton" onClick={showMaps}/>
+                </div>
+            }
             <div className="Maps">
                 {displayMaps && maps.map((map, index) => (
                     <MapButton

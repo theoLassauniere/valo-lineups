@@ -4,6 +4,14 @@
   align-items: center;
   justify-content: center;
 
+  .homeElements {
+    margin-top: 30vh;
+
+    .showMapsButton {
+      margin-left: 35vw;
+    }
+  }
+
   .Titles {
     display: flex;
     justify-content: center;
@@ -12,7 +20,7 @@
 
   .Maps {
     // background-color: #121c39;
-    margin-top: 10vh;
+    margin-top: 2vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
