@@ -1,7 +1,7 @@
 import React from 'react';
-import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
-import Home from '../components/Home/Home.js';
-import MapPage from '../pages/MapPage/MapPage.js';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from '../components/Home/Home.jsx';
+import MapPage from '../pages/MapPage/MapPage.jsx';
 
 const router = createBrowserRouter([
     {

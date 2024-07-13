@@ -1,13 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Map from '../../components/Map/Map';
 
 function MapPage() {
     const { mapName } = useParams();
 
     return (
-        <div>
-            <h1>Map: {mapName}</h1>
-        </div>
+        <Map map={mapName}/>
     );
 }
 
