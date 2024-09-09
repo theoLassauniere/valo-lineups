@@ -11,7 +11,7 @@ function MapButton({mapName, mapImage}) {
     return (
         <div>
             <button className="mapButton" onClick={navigateToMap}>
-                <img src={mapImage} className='mapImage' alt='Map' />
+                <img src={mapImage} className='mapImage' alt='LineupSelection' />
                 <p className='mapName'>{mapName}</p>
             </button>
         </div>

@@ -3,9 +3,9 @@ import MapCard from "./MapCard/MapCard";
 import AgentList from "./AgentList/AgentList";
 import AgentAbilities from "./AgentAbilities/AgentAbilities";
 import Side from "./Side/Side";
-import "./Map.scss"
+import "./LineupSelection.scss"
 
-function Map({ map }) {
+function LineupSelection({ map }) {
     return (
         <div className="mapContainer">
             <h1>Map: {map}</h1>
@@ -19,4 +19,4 @@ function Map({ map }) {
     );
 }
 
-export default Map;
+export default LineupSelection;
