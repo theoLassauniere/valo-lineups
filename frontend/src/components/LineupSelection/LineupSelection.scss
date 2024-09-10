@@ -1,3 +1,17 @@
-.mapContainer {
+@font-face {
+    font-family: 'tungsten';
+    src: url('../../assets/fonts/tungsten-bold/tungsten-bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.lineupSelection {
+    font-family: 'tungsten', sans-serif;
+    font-size: 30px;
     color: white;
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
 }

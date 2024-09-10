@@ -1,0 +1,11 @@
+.mapContainer {
+  overflow: hidden;
+  height: 420px;
+  width: 40%;
+  background-color: #1e0c1b;
+
+  .leaflet-bar a {
+    background-color: #ff4654;
+    border-bottom: 1px solid #1e0c1b;
+  }
+}

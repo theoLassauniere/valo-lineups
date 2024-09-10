@@ -7,7 +7,7 @@ import "./LineupSelection.scss"
 
 function LineupSelection({ map }) {
     return (
-        <div className="mapContainer">
+        <div className="lineupSelection">
             <h1>Map: {map}</h1>
             <div>
                 <MapCard/>
