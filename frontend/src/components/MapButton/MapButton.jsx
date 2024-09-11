@@ -1,11 +1,12 @@
 import './MapButton.scss';
 import { useNavigate } from "react-router-dom";
 
-function MapButton({mapName, mapImage}) {
+function MapButton({mapName, mapImage, mapMinimap}) {
     const navigate = useNavigate();
 
     const navigateToMap = () => {
-        navigate(`/${mapName}`);
+        console.log("minimap on clicked :", mapMinimap);
+        navigate(`/${mapName}`, {state: {mapMinimap}});
     };
 
     return (
