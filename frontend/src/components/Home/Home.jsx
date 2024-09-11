@@ -27,17 +27,17 @@ import { useEffect, useState } from "react";
 import ShowMapsButton from "./ShowMapsButton/ShowMapsButton";
 
 const maps = [
-    { name: 'Abyss', image: abyss, minimap: miniAbyss },
-    { name: 'Haven', image: haven, minimap: miniHaven },
-    { name: 'Bind', image: bind, minimap: miniBind },
-    { name: 'Split', image: split, minimap: miniSplit },
-    { name: 'Fracture', image: fracture, minimap: miniFracture },
-    { name: 'Icebox', image: icebox, minimap: miniIcebox },
-    { name: 'Breeze', image: breeze, minimap: miniBreeze },
-    { name: 'Sunset', image: sunset, minimap: miniSunset },
-    { name: 'Ascent', image: ascent, minimap: miniAscent },
-    { name: 'Pearl', image: pearl, minimap: miniPearl },
-    { name: 'Lotus', image: lotus, minimap: miniLotus },
+    {id: 0, name: 'Abyss', image: abyss, minimap: miniAbyss },
+    {id: 1, name: 'Haven', image: haven, minimap: miniHaven },
+    {id: 2, name: 'Bind', image: bind, minimap: miniBind },
+    {id: 3, name: 'Split', image: split, minimap: miniSplit },
+    {id: 4, name: 'Fracture', image: fracture, minimap: miniFracture },
+    {id: 5, name: 'Icebox', image: icebox, minimap: miniIcebox },
+    {id: 6, name: 'Breeze', image: breeze, minimap: miniBreeze },
+    {id: 7, name: 'Sunset', image: sunset, minimap: miniSunset },
+    {id: 8, name: 'Ascent', image: ascent, minimap: miniAscent },
+    {id: 9, name: 'Pearl', image: pearl, minimap: miniPearl },
+    {id: 10, name: 'Lotus', image: lotus, minimap: miniLotus },
 ];
 
 function Home() {
@@ -65,9 +65,9 @@ function Home() {
                 </div>
             }
             <div className="Maps">
-                {displayMaps && maps.map((map, index) => (
+                {displayMaps && maps.map((map) => (
                     <MapButton
-                        key={index}
+                        key={map.id}
                         className="MapButton"
                         mapName={map.name}
                         mapImage={map.image}

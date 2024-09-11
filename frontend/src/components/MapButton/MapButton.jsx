@@ -1,12 +1,18 @@
 import './MapButton.scss';
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function MapButton({mapName, mapImage, mapMinimap}) {
     const navigate = useNavigate();
 
     const navigateToMap = () => {
-        console.log("minimap on clicked :", mapMinimap);
         navigate(`/${mapName}`, {state: {mapMinimap}});
+    };
+
+    MapButton.propTypes = {
+        mapName: PropTypes.string.isRequired,
+        mapImage: PropTypes.string.isRequired,
+        mapMinimap: PropTypes.string.isRequired,
     };
 
     return (

@@ -3,11 +3,16 @@ import { MapContainer, ImageOverlay } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './MapCard.scss';
+import PropTypes from "prop-types";
 
 const bounds = [[-220, -220], [195, 195]];
 
 const MapCard = ({minimap}) => {
-    console.log(minimap.mapMinimap);
+
+    MapCard.propTypes = {
+        minimap: PropTypes.string.isRequired,
+    };
+
     return (
         <MapContainer
             className="mapContainer"
